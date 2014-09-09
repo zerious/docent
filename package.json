@@ -6,6 +6,9 @@
   ],
   "version": "0.0.0",
   "main": "docent.js",
+  "bin": {
+    "docent": "docent.js"
+  },
   "homepage": "http://github.com/lighterio/docent",
   "repository": "http://github.com/lighterio/docent.git",
   "bugs": {
@@ -37,10 +40,12 @@
     "report": "open coverage/lcov-report/index.html",
     "coveralls": "istanbul cover ./node_modules/exam/exam.js --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
-  "dependencies": {},
+  "dependencies": {
+    "shellify": "0.0.4"
+  },
   "devDependencies": {
     "zeriousify": "0.1.9",
-    "exam": "0.0.5",
+    "exam": "0.0.7",
     "istanbul": "0.2.9",
     "coveralls": "2.10.0"
   }
