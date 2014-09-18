@@ -1,45 +1,32 @@
 {
   "name": "docent",
+  "version": "0.0.1",
   "description": "A documentation generator for Node.js",
   "keywords": [
     "docent"
   ],
-  "version": "0.0.0",
   "main": "docent.js",
   "bin": {
     "docent": "docent.js"
   },
-  "homepage": "http://github.com/lighterio/docent",
-  "repository": "http://github.com/lighterio/docent.git",
-  "bugs": {
-    "url": "http://github.com/lighterio/docent/issues"
+  "engines": {
+    "node": ">=0.2.6"
   },
-  "author": {
-    "name": "Sam Eubank",
-    "email": "sameubank@gmail.com"
-  },
-  "contributors": [
-    {
-      "name": "Sam Eubank",
-      "email": "sameubank@gmail.com"
-    }
-  ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/lighterio/docent/blob/master/MIT-LICENSE.md"
-    }
-  ],
-  "engines": [
-    "node >= 0.2.6"
-  ],
   "scripts": {
     "test": "./node_modules/exam/exam.js",
-    "retest": "./node_modules/exam/exam.js --watch",
     "cover": "istanbul cover ./node_modules/exam/exam.js",
     "report": "open coverage/lcov-report/index.html",
     "coveralls": "istanbul cover ./node_modules/exam/exam.js --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
   },
+  "repository": "https://github.com/lighterio/docent.git",
+  "bugs": "https://github.com/lighterio/docent/issues",
+  "homepage": "https://github.com/lighterio/docent",
+  "author": "Sam Eubank <sameubank@gmail.com>",
+  "contributors": [
+    "Sam Eubank <sameubank@gmail.com>",
+    "Louis Kinley <louis.kinley@gmail.com>"
+  ],
+  "license": "MIT",
   "dependencies": {
     "shellify": "0.0.4"
   },
