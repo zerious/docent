@@ -2,6 +2,18 @@
   "name": "docent",
   "version": "0.0.1",
   "description": "A documentation generator for Node.js",
+  "dependencies": {
+    "mock-fs": "^2.3.1",
+    "shellify": "^0.0.4",
+    "marked": "~0.3.2",
+    "highlight.js": "~8.2.0"
+  },
+  "devDependencies": {
+    "zeriousify": "^0.1.10",
+    "exam": "^0.0.8",
+    "istanbul": "0.2.9",
+    "coveralls": "2.10.0"
+  },
   "keywords": [
     "docent"
   ],
@@ -26,15 +38,5 @@
     "Sam Eubank <sameubank@gmail.com>",
     "Louis Kinley <louis.kinley@gmail.com>"
   ],
-  "license": "MIT",
-  "dependencies": {
-    "mock-fs": "^2.3.1",
-    "shellify": "0.0.4"
-  },
-  "devDependencies": {
-    "zeriousify": "0.1.9",
-    "exam": "0.0.7",
-    "istanbul": "0.2.9",
-    "coveralls": "2.10.0"
-  }
+  "license": "MIT"
 }

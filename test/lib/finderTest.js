@@ -25,4 +25,9 @@ describe('finder', function () {
     });
   });
 
+  it('eventually succeeds', function (done) {
+    is.fail();
+    setTimeout(done, 1e3);
+  });
+
 });

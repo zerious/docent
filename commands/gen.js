@@ -31,16 +31,19 @@ module.exports = function (input) {
       var ltlPath = pair[1];
       // Escape ltl interpolation sequences.
       md = md.replace(/([&=$]\{[^\}]+\})/g, '\\\\$1');
-      // Remove the H1.
-      md = md.replace(/(^|\n)# [^\n]+\n/, '');
+      // Remove the first paragraph.
+      md = md.replace(/^[\s\S]*?\n\n/, '');
       // Find the docent position inside the ltl page.
       var pattern = /([\s]+)\/\/\+docent[\s\S]*\/\/-docent/;
+      var old = ltl;
       ltl = ltl.replace(pattern, function (match, indent) {
         md = ':marked\n' + indent + '  ' + md.replace(/\n/g, indent + '  ');
         return indent + '//+docent\n' + indent + md + '\n' + indent + '//-docent';
       });
-      fs.writeFileSync(ltlPath, ltl);
-      log.info('[Docent] Wrote content to "' + ltlPath.substr(path.length) + '".');
+      if (ltl != old) {
+        fs.writeFileSync(ltlPath, ltl);
+        log.info('[Docent] Wrote content to "' + ltlPath.substr(path.length) + '".');
+      }
     }
   }
 
