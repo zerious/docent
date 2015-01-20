@@ -1,20 +1,10 @@
 #!/usr/bin/env node
-
-// When running directly, start the CLI.
 if (process.mainModule == module) {
-
-  var shellify = require('shellify');
-  shellify({
-    commands: {
-      gen: {
-        note: 'Writes */README.md contents to *.ltl files',
-        options: {
-          //path: 'The path to traverse [.]'
-        }
-      }
+  require(__dirname + '/common/process/cli')({
+    aliases: {
+      g: 'gen'
     }
   });
-
 }
 
 /**
@@ -46,6 +36,6 @@ var docent = module.exports = function () {
  */
 Object.defineProperty(docent, 'version', {
   get: function () {
-    return require('./package.json').version;
+    return require(__dirname + '/package.json').version;
   }
 });

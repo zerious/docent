@@ -7,8 +7,6 @@
 [![Support](https://img.shields.io/gratipay/Lighter.io.svg)](https://gratipay.com/Lighter.io/)
 
 
-## TL;DR
-
 Docent is a documentation generator for Node.js projects.
 
 Install `docent` globally:
