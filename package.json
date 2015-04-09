@@ -1,6 +1,6 @@
 {
   "name": "docent",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A documentation generator for Node.js",
   "dependencies": {
     "marked": "~0.3.2",
